@@ -1,0 +1,132 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: gilroy; */
+}
+html, 
+body {
+        height: 100%;
+        width: 100%;
+}
+@font-face {
+    font-family: a;
+    src: url(PPWoodland-Regular.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(dm-sans-v11-latin_latin-ext-500.ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(dm-sans-v11-latin_latin-ext-regular.ttf);
+}
+ nav{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 0 40px;
+
+
+}
+.nav-part1{
+    width: 40px;
+    cursor: pointer;
+}
+.nav-part1 .line{
+    height: 2px;
+    width: 100%;
+    background-color:#434b34;
+    margin-bottom: 4px;
+    
+
+}
+.nav-part2 button{
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 1px solid #434b34;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.nav-part2 button::after{
+    content: "";
+    position: absolute;
+    background-color: #475828;
+    transition: all 0.3 ease;
+    pointer-events: none;
+}
+.nav-part2 button::before{
+    bottom: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+}
+.nav-part2 button:nth-last-child(1){
+    background-color: #475828;
+    color: #fff;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+
+}
+#page1 img{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    scale: 0.5;
+    /* object-fit: cover; */
+}
+nav svg{
+    scale: 0.27;
+
+    position: absolute;
+    top: -430%;
+   z-index: 9;
+    fill: #434B34;
+}
+#page2{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    /* flex-direction: column; */
+    font-family: a;
+  
+    height: 100vh;
+    width: 100%;
+    background-color:#5B6647;
+    position: relative;
+   
+}
+#page2>h1{
+text-align: center;
+font-family: a;
+font-size: 4.5rem;
+position: absolute;
+font-weight: 100;
+line-height: 1.2;
+width: 70%;
+ padding: 10vw  12vw;
+ color: #475828d8;
+
+}
+#page2 svg{
+    scale: 1;
+    height: 100%;
+    width: 100%;
+    fill: #434B34;
+
+}
+.page3{
+    height: 100vh;
+    width: 100%;
+    background-color:#5B6647;
+}
