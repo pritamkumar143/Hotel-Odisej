@@ -82,14 +82,15 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    scale: 0.5;
-    /* object-fit: cover; */
+    /* scale: 0.28;
+    object-fit: cover;
+    object-position: center; */
 }
 nav svg{
     scale: 0.27;
 
     position: absolute;
-    top: -430%;
+    top: -60%;
    z-index: 9;
     fill: #434B34;
 }
@@ -100,7 +101,7 @@ nav svg{
     /* flex-direction: column; */
     font-family: a;
   
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color:#5B6647;
     position: relative;
@@ -119,10 +120,10 @@ width: 70%;
 
 }
 #page2 svg{
-    scale: 1;
-    height: 100%;
     width: 100%;
-    fill: #434B34;
+    object-fit: cover;
+    object-position: center;
+    /* fill: #434B34; */
 
 }
 .page3{

@@ -29,48 +29,29 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
 loco();
+var tl = gsap.timeline();
 
 
-gsap.to("#page1 img", {
+ tl.from("nav ", {
+  y: -60,
+  opacity:0,
+  delay:-0.5,
+  duration:0.6,
+} );
+ tl.from("nav svg", {
     y: -40,
-    scale:1.1,
-    delay:2,
-    duration:1.5,
+    opacity:0,
+    scale:0.27,
+  } );  
+  tl.from("#page1 img", {
+    scale:0.5,
+    delay:-0.1,
+    duration:0.6,
+
+
 
  } );
- gsap.to("nav svg", {
-    y: 260,
-    scale:0.27,
-    delay:1,
-    duration:1,
-    // scrollTrigger:{
 
-    // }
-  } );  
-
-// gsap.to("nav svg ", {
-//     color: "#434B34",
-//     scrollTrigger: {
-//         trigger: "#main",
-//         scroller: "#page1",
-//         markers: true,
-//         start: "top 10%",
-//         end: "top -10%",
-//         scrub: 4
-//     }
-// });
-
-// gsap.to("#page1 h1", {
-//     y: -40,
-//     color: "#434B34",
-//     scrollTrigger: {
-//         trigger: "#main",
-//         scroller: "#page1",
-//         start: "top 10%",
-//         end: "top -10%",
-//         scrub: 4
-//     }
-// });
 
 
 var clutter = "";
