@@ -32,24 +32,36 @@ loco();
 var tl = gsap.timeline();
 
 
- tl.from("nav ", {
-  y: -60,
-  opacity:0,
-  delay:-0.5,
-  duration:0.6,
-} );
- tl.from("nav svg", {
-    y: -40,
-    opacity:0,
-    scale:0.27,
-  } );  
+tl.from("nav",{
+  y:-70,
+  delay:-0.2,
+  duration:2,
+  opacity:0
+});
+
+tl.from("nav svg",{
+     y:-40,
+     opacity:0,
+     delay:-0.2,
+     duration:0.5,
+});
+tl.to("nav>svg",{
+  y:"-15vh",
+  scale:0.15,
+  scrollTrigger:{
+    trigger:"nav>svg",
+    start:"top 10%",
+    end:"bottom  90%",
+    scrub:true ,
+    scroller:"#main",
+}
+});
+
   tl.from("#page1 img", {
     scale:0.5,
-    delay:-0.1,
+    delay:0.5,
     duration:0.6,
-
-
-
+    ease:"power5.easeOut",
  } );
 
 
@@ -75,3 +87,39 @@ gsap.to("#page2>h1>span",{
     color:`#e3e3c4`
 })
 
+
+var clutter = "";
+
+document.querySelector("#page3-part1>h1").textContent.split("").forEach(function(dets){
+    clutter += `<span>${dets}</span>`
+
+    document.querySelector("#page3-part1>h1").innerHTML = clutter;
+})
+
+
+gsap.to("#page3-part1>h1>span",{
+    scrollTrigger:{
+        trigger:`#page3-part1>h1>span`,
+        start:`top 70%`,
+        end:`bottom 60%`,
+        scroller:`#main`,
+        scrub:4,
+    },
+    stagger:.9,
+    color:`#434b34`
+})
+
+tl.from("#page3-part2>p",{
+    y:-50,
+    delay:0.5,
+    duration:0.6,
+    ease:"power5.easeOut",
+    scrollTrigger:{   
+        trigger:`#page3-part2>p`,
+        start:`top 70%`,
+        end:`bottom 60%`,
+        scroller:`#main`,
+        scrub:4,
+    },
+
+});
