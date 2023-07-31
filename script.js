@@ -109,7 +109,7 @@ gsap.to("#page3-part1>h1>span",{
     color:`#434b34`
 })
 
-tl.from("#page3-part2>p",{
+tl.from("#page3-part2-1>p",{
     y:-50,
     delay:0.5,
     duration:0.6,
