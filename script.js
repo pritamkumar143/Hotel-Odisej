@@ -32,29 +32,22 @@ loco();
 var tl = gsap.timeline();
 
 
-tl.from("nav",{
-  y:-70,
-  delay:-0.2,
-  duration:2,
-  opacity:0
-});
 
-tl.from("nav svg",{
-     y:-40,
-     opacity:0,
-     delay:-0.2,
-     duration:0.5,
-});
 tl.to("nav>svg",{
-  y:"-15vh",
+  y:"-10vh",
   scale:0.15,
   scrollTrigger:{
     trigger:"nav>svg",
     start:"top 10%",
     end:"bottom  90%",
-    scrub:true ,
+    scrub:4,
     scroller:"#main",
 }
+});
+tl.from("nav",{
+  y:-70,
+  duration:2,
+  opacity:0
 });
 
   tl.from("#page1 img", {
@@ -66,10 +59,10 @@ tl.to("nav>svg",{
 
 
 
-//  // /// //// /// // //  //
-//                          //  
-//      PAGE-2 JS //  
-//                        //
+//  // /// //// /// // //  // // / // //
+//${}-> templates literal //  
+//     PAGE-2 JS //  //  // // 
+//                        // // // // // 
 
 
 // var clutters = "";
@@ -94,15 +87,28 @@ h2Data.forEach(function (elem) {
 gsap.to("#page2  h1 span",{
     scrollTrigger:{
         trigger:`#page2  h1 span`,
-        start:`top 50%`,
-        end:`bottom 70%`,
+        start:`top 60%`,
+        end:`bottom 10%`,
         scroller:`#main`,
         scrub:4,
         markerw:true,
     },
     stagger:.6,
     color:`#e3e3c4`
+});
+
+
+
+gsap.to("#page2 #svg2,#page2 #svg3",{
+  left:'-100vw',
+  scrollTrigger:{
+    trigger:"#page2 #svg2",
+    scroller:"#main",
+    scrub:2,
+  }
 })
+
+
 //                     //
 //                        //
 // Page-3 JS    //  

@@ -8,6 +8,10 @@ html,
 body {
   height: 100%;
   width: 100%;
+
+}
+body{
+  overflow-x: hidden;
 }
 @font-face {
   font-family: a;
@@ -85,7 +89,7 @@ nav svg {
   scale: 0.27;
 
   position: absolute;
-  top: -70%;
+  top: -80%;
   z-index: 9;
   fill: #434b34;
 }
@@ -94,10 +98,25 @@ nav svg {
   background-color: #5B6647;
   position: relative;
 }
-#page2 svg{
+#page2 #svg1{
   width: 100%;
   object-fit: cover;
   position: absolute;
+}
+
+#page2 #svg2{
+    position: absolute;
+    bottom: -10%;
+    width: 300vw;
+    fill: #5B6647;
+    z-index: 9;
+}
+#page2 #svg3{
+    position: absolute;
+    bottom: -10%;
+    left: -50vw;
+    width: 300vw;
+    fill: #e3e39d;
 }
 
 
@@ -122,7 +141,7 @@ nav svg {
 
 #page3 {
   width: 100%;
-  background-color:#f7f7ee;
+  /* background-color:#f7f7ee; */
   display: flex;
   align-items: start;
   justify-content: center;
@@ -255,32 +274,109 @@ nav svg {
 }
 
 #page4 {
-  width: 100%;
-  background-color: #f7f7ee;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  font-family: a;
-
-  min-height: 140vh;
-  width: 100%;
-  position: relative;
+   min-height: 100vh;
+    padding: 15vw 3vw;
+    width: 100%;
+      background-color:#F7F7EE;
+      position: relative;
 }   
 
-#page4 .box {
-  width: 100%;
-  height: 30vh;
-  display: inline-flex;
-  align-items: center;
+#page4 .elem {
+ width: 100%;
+    height: 27vh;
+    border: 1px solid #555;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
   
-  background-color: red;
-  text-align: center;
-}
-#page4 .box img {
 
-  width: 30%;
+}
+#page4 .elem:hover{
+  background-color: #475828;
+  color: #e3e3c4;
+}
+#page4 .elem:hover h3{
+  color: #e3e3c4;
+}
+#page4 .elem:hover p{
+  color: #fff;
+}
+#page4 .elem:hover img{
+  margin-left: 25vw;
+}
+
+
+
+.elem:nth-child(1){
+  border-top: 1px solid #dadada;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.elem:nth-last-child(1){
+   border-bottom: 1px solid #dadada;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#page4 .elem-part1 {
+  width: 300px;
+  height: 200px;
+  margin-left: -25vw;
+  overflow:hidden ;
+}
+#page4 .elem-part1 img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 20px;
+}
+#page4 .elem-part2 {
+  width: 100%;
+  height: 200px;
+}
+#page4 .elem-part2 h3{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-size: 40px;
+  font-family: a;
+  color: #475828;
+
+}
+#page4 .elem-part2 p{
+  font-family: a;
+  color: #475828;
+
+}
+
+#page4 .elem-part3 .icon{
+  height: 1.5em;
+  width: 1.9em;
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2em;
+  overflow: hidden;
+  background-color: #5b6647;
+  transition: all 0.3s
+    cubic-bezier(0.55, 0.085, cubic-bezier(0.55, 0.085, 0.68, 0.53));
+}
+#page4 .elem-part3 .icon svg {
+  fill: #fff;
+  height: 1em;
+  width: 0.7em;
+  display: inline-block;
+  transition: all 0.3s
+    cubic-bezier(0.55, 0.085, cubic-bezier(0.55, 0.085, 0.68, 0.53));
+}
+#page3 .elem-part3 .icon:hover {
+  background-color: #434b34;
+}   
+#page4 .elem-part3 .icon:hover svg {
+  fill: #fff;
+}
+#page4 .elem-part3 .icon:hover span {
+  color: #fff;
 }
