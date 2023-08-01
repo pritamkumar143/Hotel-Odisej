@@ -66,34 +66,55 @@ tl.to("nav>svg",{
 
 
 
-var clutter = "";
-
-document.querySelector("#page2>h1").textContent.split("").forEach(function(dets){
-    clutter += `<span>${dets}</span>`
-
-    document.querySelector("#page2>h1").innerHTML = clutter;
-})
+//  // /// //// /// // //  //
+//                          //  
+//      PAGE-2 JS //  
+//                        //
 
 
-gsap.to("#page2>h1>span",{
+// var clutters = "";
+// document.querySelector("#page2>h1").textContent.split("").forEach(function(dets){
+//   clutters += `<span>${dets}</span>`
+
+//   document.querySelector("#page2>h1").innerHTML = clutters;
+// })
+
+
+var h2Data = document.querySelectorAll("#page2 h1");
+h2Data.forEach(function (elem) {
+  var textData = elem.textContent;
+  var splitedText = textData.split("");
+  var clutter = "";
+  splitedText.forEach(function (e) {
+    clutter += `<span>${e}</span>`;
+  });
+  elem.innerHTML = clutter;
+});
+
+gsap.to("#page2  h1 span",{
     scrollTrigger:{
-        trigger:`#page2>h1>span`,
-        start:`top 60%`,
-        end:`bottom top`,
+        trigger:`#page2  h1 span`,
+        start:`top 50%`,
+        end:`bottom 70%`,
         scroller:`#main`,
         scrub:4,
+        markerw:true,
     },
-    stagger:.9,
+    stagger:.6,
     color:`#e3e3c4`
 })
+//                     //
+//                        //
+// Page-3 JS    //  
+//                        //
+//                        //
 
 
-var clutter = "";
-
+var clutters="";
 document.querySelector("#page3-part1>h1").textContent.split("").forEach(function(dets){
-    clutter += `<span>${dets}</span>`
+    clutters += `<span>${dets}</span>`
 
-    document.querySelector("#page3-part1>h1").innerHTML = clutter;
+    document.querySelector("#page3-part1>h1").innerHTML = clutters;
 })
 
 
@@ -105,21 +126,74 @@ gsap.to("#page3-part1>h1>span",{
         scroller:`#main`,
         scrub:4,
     },
-    stagger:.9,
+    stagger:.2,
     color:`#434b34`
 })
 
-tl.from("#page3-part2-1>p",{
-    y:-50,
+
+gsap.from("#page3-img",{
+    y:50,
     delay:0.5,
+    opacity:0,
     duration:0.6,
-    ease:"power5.easeOut",
     scrollTrigger:{   
-        trigger:`#page3-part2>p`,
-        start:`top 70%`,
-        end:`bottom 60%`,
+        trigger:`#page3-img`,
+        start:`top 85%`,
+        end:`top 75%`,
         scroller:`#main`,
         scrub:4,
     },
+});
+gsap.from("#page3-img1",{
+  y:50,
+  delay:0.5,
+  opacity:0,
+  duration:0.6,
+  scrollTrigger:{   
+      trigger:`#page3-img1`,
+      start:`top 85%`,
+      end:`top 75%`,
+      scroller:`#main`,
+      scrub:4,
+  },
+});
+gsap.from("#page3-img2",{
+  y:50,
+  delay:0.5,
+  opacity:0,
+  duration:0.6,
+  scrollTrigger:{   
+      trigger:`#page3-img2`,
+      start:`top 85%`,
+      end:`top 75%`,
+      scroller:`#main`,
+      scrub:4,
+  },
+});
 
+gsap.from("#page3-part2-1 p",{
+  y:50,
+  delay:0.5,
+  opacity:0,
+  duration:0.6,
+  scrollTrigger:{   
+      trigger:`#page3-part2-1`,
+      start:`top 85%`,
+      end:`top 75%`,
+      scroller:`#main`,
+      scrub:4,
+  },
+});
+gsap.from("#page3-part2-1 span , #page3-part2-1 .icon",{
+  y:40,
+  delay:0.5,
+  opacity:0,
+  duration:0.6,
+  scrollTrigger:{   
+      trigger:`#page3-part2-1`,
+      start:`top 75%`,
+      end:`top 65%`,
+      scroller:`#main`,
+      scrub:4,
+  },
 });
