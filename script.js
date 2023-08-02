@@ -203,3 +203,7 @@ gsap.from("#page3-part2-1 span , #page3-part2-1 .icon",{
       scrub:4,
   },
 });
+
+//  //  / / / // //          / / / /
+//    PAGE-4 JS    // // // // / /
+ // //// // // // / // // / //  // 
